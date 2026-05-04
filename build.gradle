@@ -66,4 +66,14 @@ subprojects {
     implementation 'io.micrometer:micrometer-tracing-bridge-brave'
     implementation 'io.zipkin.reporter2:zipkin-reporter-brave'
 }
+    plugins {
+  id "org.sonarqube" version "7.3.0.8198"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "C0staWare_VortexCommerce-"
+    property "sonar.organization", "c0staware"
+  }
+}
 }
