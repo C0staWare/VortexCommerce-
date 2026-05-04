@@ -1,0 +1,16 @@
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive' // Event Store
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // Query Side (Síncrono para reportes)
+    implementation 'org.postgresql:postgresql'
+    implementation 'org.springframework.kafka:spring-kafka'
+    
+    // Cloud & Security
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+    
+    // Observabilidad
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'io.micrometer:micrometer-tracing-bridge-brave'
+    implementation 'io.zipkin.reporter2:zipkin-reporter-brave'
+}

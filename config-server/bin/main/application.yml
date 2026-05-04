@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native # Lee configuraciones locales en lugar de buscar un repo Git
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config # Carpeta donde guardaremos configs compartidas si es necesario
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
